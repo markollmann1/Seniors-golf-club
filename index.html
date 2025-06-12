@@ -5,44 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seniors Golf Club</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+    :root {
+      --primary-color: #2e8b57;
+      --accent-color: #f4f4f4;
+      --text-color: #333;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--accent-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
     header {
-      background-color: #006400;
+      background: var(--primary-color);
       color: white;
-      padding: 1em;
+      padding: 2rem 1rem;
       text-align: center;
     }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
     nav {
-      background: #228B22;
-      padding: 0.5em;
-      text-align: center;
+      background: #1e6b3f;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem 0;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0.5rem 1rem;
       text-decoration: none;
       font-weight: bold;
     }
-    section {
-      padding: 2em;
+    nav a:hover {
+      text-decoration: underline;
     }
-    footer {
-      background-color: #006400;
-      color: white;
-      text-align: center;
-      padding: 1em;
-      position: relative;
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background: white;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
     }
     form input, form textarea {
-      display: block;
-      margin: 10px 0;
-      width: 100%;
-      padding: 10px;
-      max-width: 500px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    form button {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #246e47;
+    }
+    footer {
+      text-align: center;
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header, section {
+        padding: 1rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
@@ -67,9 +134,9 @@
 <section id="events">
   <h2>Upcoming Events</h2>
   <ul>
-    <li><strong>Weekly Tee-Off:</strong> Every Thursday at 9:00 AM - Fairway Greens Golf Course</li>
-    <li><strong>Summer Scramble Tournament:</strong> July 15, 2025 - Prizes, Lunch & Fun!</li>
-    <li><strong>Golf & Social Mixer:</strong> August 10, 2025 - Golf followed by dinner at the clubhouse</li>
+    <li><strong>Weekly Tee-Off:</strong> Every Thursday at 9:00 AM – Fairway Greens Golf Course</li>
+    <li><strong>Summer Scramble Tournament:</strong> July 15, 2025 – Prizes, Lunch & Fun!</li>
+    <li><strong>Golf & Social Mixer:</strong> August 10, 2025 – Golf followed by dinner at the clubhouse</li>
   </ul>
 </section>
 
